@@ -1,13 +1,15 @@
-console.log('hi');
+console.log('hello, world!');
 
+//All Options
 const options = ["rock", "paper", "scissors"];
-
+//Math properties (Constants)
 function getComputerChoice() {
 const choice = options[Math.floor(Math.random() * options.length)]
 console.log(choice);
 return choice;
 }
 
+//function checks each option from player/s choice
 function checkWinner(playerSelection, computerSelection) {
     if(playerSelection == computerSelection) {
         return "Tie!";
@@ -23,6 +25,7 @@ function checkWinner(playerSelection, computerSelection) {
     }
 }
 
+//Round console to text
 function playRound(playerSelection, computerSelection) {
     const result = checkWinner(playerSelection, computerSelection);
     if(result == "Tie!"){
@@ -36,6 +39,12 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+//Game LOOP
+function game(){
+    
+}
+
+//Spits out the result in the console
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
