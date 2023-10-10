@@ -1,50 +1,20 @@
-console.log('hello, world!');
+const game = ()=> {
+    let pScore = 0;
+    let cScore = 0;
 
-//All Options
-const options = ["rock", "paper", "scissors"];
-//Math properties (Constants)
-function getComputerChoice() {
-const choice = options[Math.floor(Math.random() * options.length)]
-console.log(choice);
-return choice;
-}
+    const startGame = () => {
+        const playButton = document.querySelector('.intro button');
+        const introScreen = document.querySelector('.intro');
+        const match = document.querySelector('.match');
 
-//function checks each option from player/s choice
-function checkWinner(playerSelection, computerSelection) {
-    if(playerSelection == computerSelection) {
-        return "Tie!";
-    }
-    else if((playerSelection == "rock" && computerSelection == "scissors") ||
-     (playerSelection == "scissor" && computerSelection == "paper") ||
-    (playerSelection == "paper" && computerSelection == "rock")
-    ){
-        return "Player";
-    }
-    else {
-        return "Computer";
-    }
-}
+        playButton.addEventListener('click', () =>{
+            introScreen.classList.add("fadeOut");
+        });
+    };
 
-//Round console to text
-function playRound(playerSelection, computerSelection) {
-    const result = checkWinner(playerSelection, computerSelection);
-    if(result == "Tie!"){
-        return "It's a Tie!!"
-    }
-    else if(result == "Player"){
-        return `You win! ${playerSelection} beats ${computerSelection}`
-    }
-    else {
-        return `YOU LOSE!! ${computerSelection} beats ${playerSelection}`
-    }
-}
+    //Call all inner functions
+    startGame();
+};
 
-//Game LOOP
-function game(){
-    
-}
-
-//Spits out the result in the console
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+//Start Game
+game();
