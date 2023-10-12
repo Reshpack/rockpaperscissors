@@ -3,6 +3,8 @@ let computer = { name: 'computer', score: 0, choice: null };
 
 let choices = ["rock", "scissors", "paper"];
 
+//Start the game 
+
 window.onload = function() {
     choices.forEach(renderChoices);
 }

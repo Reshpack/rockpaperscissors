@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: monospace;
+    box-sizing: border-box;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
 }
 
 .choices {
-    width: 300px;
+    width: 700px;
     height: 80px;
     margin-top: 10px;
     margin: 0 auto;
@@ -31,11 +32,13 @@ body {
 .choices img {
     width: 80px;
     height: 80px;
+    margin: 0 30px 0 30px;
 }
 
 .score {
     display: flex;
     justify-content: space-around;
+    padding: 100px;
 }
 
 .score h2 {
@@ -45,3 +48,21 @@ body {
 .score p {
     font-size: 20px;
 }
+
+.intro h1 {
+    font-size: 50px;
+}
+
+.intro button {
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    background-color: #06C4CC;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 40px;
+}
+
